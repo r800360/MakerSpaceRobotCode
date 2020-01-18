@@ -33,6 +33,9 @@ void loop () {
     c = bluetooth.read ();
     if (c == '\n') {
       pos = message.substring (1);
+      while ( (message.startsWith ("x") && pos.toInt() < 10 && pos.toInt() > -10) || (message.startsWith ("y") && pos.toInt() < 10 && pos.toInt() < -10) ) {
+
+      }
       if (message.startsWith ("x") && pos.toInt () < 200 && pos.toInt () > -200) {
         xPos = (pos.toInt ());
       }
@@ -51,7 +54,7 @@ void loop () {
     }
   }
 
-  if (xPos > 0) {
-    digitalWrite 
-  }
+/*  if (xPos > 0) {
+    digitalWrite
+  }*/
 }
